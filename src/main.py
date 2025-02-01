@@ -1,7 +1,8 @@
-#Funções para definir em que módulo entrar:
+#Variáveis
+
+books = ['Bible', 'Harry Potter and the Philosopher Stone', 'Python for Dummies', 'Design Patterns']
 
 def variaveis():
-    #Variáveis
 
     print("Hello world! God bless you!")
     age = 25
@@ -10,15 +11,17 @@ def variaveis():
 
     print(f"I'm {name}!")
 
-def inputs():
+    opcoes()
 
-    #Inputs
+#Inputs
+def inputs():
     book = input("Tell me a book: ")
     print(book)
+    
+    opcoes()
 
+#Listas
 def listas():
-    #Listas
-    books = ['Bible', 'Harry Potter and the Philosopher Stone', 'Python for Dummies', 'Design Patterns']
 
     print(books[0])
     print(books[1].title())
@@ -28,12 +31,14 @@ def listas():
     books.append(newBook)
     print(books[-1])
 
+    opcoes()
+
 #Functions
 
 def someFunction():
     print("Hellooo! This function is working!")
 
-someFunction()
+    someFunction()
 
 #For loops
 
@@ -41,18 +46,28 @@ def forLoops():
     for i in books:
         print(i)
 
+    opcoes()
+
 #While loops
 
 def whileLoops():
     counter = 0
-    
-opcao = int(input("Escolha uma opção: \n1-Variáveis\n2-Inputs\n3-Listas\n4-Loop For\n5-Loop While"))
 
-if(opcao == 1):
-    variaveis()
-elif(opcao == 2):
-    inputs()
-elif(opcao == 3):
-    listas()
+def pesquisaBinaria(lista, numero):
+    low = lista[0],
+    high = len(lista)
+    guess = 0
 
-   
+#Opções de módulos
+def opcoes():
+    opcao = int(input("\n\nEscolha uma opção: \n1-Variáveis\n2-Inputs\n3-Listas\n4-Loop For\n5-Loop While\n\nNúmero #: "))
+    print("\n")
+    if(opcao == 1):
+        variaveis()
+    elif(opcao == 2):
+        inputs()
+    elif(opcao == 3):
+        listas()
+    elif(opcao == 4):
+        forLoops()
+opcoes()
