@@ -52,6 +52,9 @@ def forLoops():
 
 def whileLoops():
     counter = 0
+    while counter < 12:
+        print(f'Valor de counter é: {counter}')
+        counter += 1
 
 def pesquisaBinaria(lista, numero):
     low = lista[0],
@@ -60,7 +63,11 @@ def pesquisaBinaria(lista, numero):
 
 #Opções de módulos
 def opcoes():
-    opcao = int(input("\n\nEscolha uma opção: \n1-Variáveis\n2-Inputs\n3-Listas\n4-Loop For\n5-Loop While\n\nNúmero #: "))
+    try:
+        opcao = int(input("\n\nEscolha uma opção: \n1-Variáveis\n2-Inputs\n3-Listas\n4-Loop For\n5-Loop While\n\nNúmero #: "))
+    except:
+        print('\nDigite apenas números!')
+        opcoes()
     print("\n")
     if(opcao == 1):
         variaveis()
@@ -70,4 +77,6 @@ def opcoes():
         listas()
     elif(opcao == 4):
         forLoops()
+    elif(opcao == 5):
+        whileLoops()
 opcoes()
