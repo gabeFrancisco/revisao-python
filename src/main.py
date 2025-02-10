@@ -61,6 +61,20 @@ def pesquisaBinaria(lista, numero):
     high = len(lista)
     guess = 0
 
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        print('aauw auw')
+
+def oop():
+    dog = Dog('Spike', 3)
+    dog.bark()
+    opcoes()
+
+
 #Opções de módulos
 def opcoes():
     try:
@@ -79,4 +93,8 @@ def opcoes():
         forLoops()
     elif(opcao == 5):
         whileLoops()
+    elif(opcao == 6):
+        oop()
 opcoes()
+
+
